@@ -1,13 +1,25 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const markdown = require("./utils/generateMarkdown");
+markdown = require("./utils/generateMarkdown")
+
 
 
 // Object array used to store questions for user
 const questions = [
 
+    
     {
-        message: "Whats the name of your project",
+        message: "Whats your gitHub user name?",
+        name: "userName"
+    },
+
+    {
+        message: "Whats the name of your project repo?",
+        name: "repoName"
+    },
+
+    {
+        message: "Whats the name of your project?",
         name: "title"
     },
 
@@ -19,51 +31,54 @@ const questions = [
 
 
     {
-        message: "Enter the table of contents",
-        name: "table"
-    },
-
-
-    {
-        message: "How do you install your project ?",
+        message: "How do you install your project?",
         name: "install"
     },
 
     {
-        message: "What license was used for this page ?",
+        message: "What license was used for this page?",
         name:"license"
+    },
+
+    {
+        message: "How do you use the project?",
+        name: "usage"
     },
 
 
     {
-        message: "Whos contributing ?",
+        message: "Whos contributing?",
         name:"cont"
     },
 
 
     {
-        message: "Any tests ?",
-        name: "tests"
+        message: "Any tests?",
+        name: "test"
     },
 
 
     {
-        message: "Any questions ?",
-        name: "questions"
+        message: "Whats your gitHub email?",
+        name: "email"
     }
 
 ];
 
+
+const gitAccount = questions.userName;
+
+
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName + ".md", data);
+    fs.writeFileSync(fileName + ".md", data);
 }
 
  function init() {
     inquirer.prompt(questions)
     .then((inquirerResponse) => { 
-        console.log("Making ReadMe");
+        console.log("Creating ReadMe");
         console.log(inquirerResponse);
-        writeToFile(inquirerResponse.title, markdown(inquirerResponse));
+        writeToFile(questions.title, markdown(inquirerResponse));
 
 
     })
