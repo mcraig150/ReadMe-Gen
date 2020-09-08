@@ -1,14 +1,14 @@
 
 
-![License](https://img.shields.io/github/license/mcraig150/ReadMe-Gen)
+![License](https://img.shields.io/github/license/Mcraig150/employee-viewer)
 
-# ReadMe Generator
+# Employee Directory
 
 
 
 
 #### Description
-Creates a README file for a given project based on the users input
+React app used to display users employees with options to search and filter.
 
 
 #### Table of Content
@@ -20,24 +20,24 @@ Creates a README file for a given project based on the users input
 
 
 #### Installation
-Clone this gitHub repository
+N/A
 
 #### Usage
-After cloning the repository navigate into the develop folder in your terminal, and exacute the command "node index.js"
+Use the search bar to input desired name or click on buttons to filter by role
 
 #### Licenses
-none
+N/A
 
 #### Contribution
-Mcraig150
+N/A
 
 #### Tests
-None
+N/A
 
 
-##### Contact 
+##### Questions
 
-Mcraig150@gmail.com
+For any comments or questions please contact me at: N/A
 
 
 
